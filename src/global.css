@@ -1,0 +1,16 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif;
+}
+
+:root {
+  --white: #FFFFFF;
+  --dark: #212121;
+  --dark-hover: #3a3a3a;
+}
+
+a {
+  text-decoration: none;
+}
