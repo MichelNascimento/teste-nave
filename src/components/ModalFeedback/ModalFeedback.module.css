@@ -1,0 +1,32 @@
+.overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modalFeedbackContainer {
+  background-color: var(--white);
+  width: 592px;
+  height: 160px;
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  height: 14px;
+  width: 14px;
+  align-self: flex-end;
+  cursor: pointer;
+}
+
+.modalFeedbackContainer span:first-child {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
