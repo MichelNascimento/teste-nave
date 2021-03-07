@@ -1,0 +1,39 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.NaverRegisterContainer {
+  width: 900px;
+  max-width: 1010px;
+  display: flex;
+  flex-direction: column;
+}
+
+.NaverRegisterContainer .title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1.5rem 0.5rem;
+}
+
+.NaverRegisterContainer .title img {
+  cursor: pointer;
+}
+
+.NaverRegisterContainer .title span {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-left: 1.5rem;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+}
+
+.form div {
+  width: 100%;
+  padding: 1rem 0.5rem;
+}
