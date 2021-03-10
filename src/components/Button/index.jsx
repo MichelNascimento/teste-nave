@@ -2,6 +2,6 @@ import './Button.module.css'
 
 export default function Button(props) {
   return (
-    <button>{props.text}</button>
+    <button type={props.type} onClick={props.onClick}>{props.text}</button>
   )
 }
