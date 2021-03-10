@@ -1,0 +1,22 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.ListNaversContainer {
+  width: 1200px;
+}
+
+.title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.listNavers {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(281px, 1fr));
+  gap: 1rem;
+}
