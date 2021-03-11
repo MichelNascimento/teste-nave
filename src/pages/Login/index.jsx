@@ -31,7 +31,7 @@ export default function Login() {
       history.push('/ListNavers')
 
     } catch (error) {
-      console.error(error)
+      alert('Falha ao realizar login: ', error)
     }
   }
 

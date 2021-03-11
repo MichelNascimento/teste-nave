@@ -23,7 +23,7 @@ export default function ListNavers() {
       })
 
     } catch (e) {
-      console.error(e)
+      alert('Erro ao carregar Navers: ', e)
     }
   }
 
@@ -41,9 +41,9 @@ export default function ListNavers() {
           </Link>
         </div>
         <div className={styles.listNavers}>
-          {userInfo.map(user => (
+          {userInfo.map((user, index) => (
             <CardNaver
-              key={user.id}
+              key={index}
               urlPhoto={user.url}
               name={user.name}
               jobRole={user.job_role}

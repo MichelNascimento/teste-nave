@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useHistory } from 'react-router-dom'
 
 import Input from '../../components/Input'
 import Button from '../../components/Button'
@@ -9,7 +9,7 @@ import api from '../../services/api'
 
 import back from '../../assets/back.svg'
 
-export default function NaverRegister(props) {
+export default function NaverRegister() {
   const [userInfo, setUserInfo] = useState({
     name: '',
     job_role: '',
@@ -21,16 +21,20 @@ export default function NaverRegister(props) {
 
   const token = localStorage.getItem('token')
 
+  const history = useHistory()
+
   async function handleRegister() {
     try {
       await api.post('/navers', userInfo, {
         headers: {
           Authorization: token
         }
-      }).then(response => console.log(response))
+      }).then(() => alert('Naver criado com sucesso!'))
+
+      history.push('/ListNavers')
 
     } catch (e) {
-      console.log(e)
+      alert('Falha ao criar Naver: ', e)
     }
   }
 
@@ -41,7 +45,7 @@ export default function NaverRegister(props) {
           <Link to="/ListNavers">
             <img src={back} alt="Voltar" />
           </Link>
-          <span>{props.action} Naver</span>
+          <span>Adicionar Naver</span>
         </div>
         <div className={styles.form}>
           <div>

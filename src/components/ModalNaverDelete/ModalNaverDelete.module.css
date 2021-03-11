@@ -47,6 +47,7 @@
 
 .options button:first-child {
   background-color: transparent;
+  color: var(--dark);
 }
 
 .options button:last-child {

@@ -11,16 +11,15 @@ export default function ModalNaverDetails(props) {
 
   const token = localStorage.getItem('token')
 
-  useEffect(() => {
-    async function loadNaver() {
-      await api.get(`/navers/${props.id}`, {
-        headers: {
-          Authorization: token
-        }
+  async function loadNaver() {
+    await api.get(`/navers/${props.id}`, {
+      headers: {
+        Authorization: token
       }
-      )
-    }
+    })
+  }
 
+  useEffect(() => {
     loadNaver()
   }, [])
 
@@ -31,7 +30,7 @@ export default function ModalNaverDetails(props) {
           <img src={props.url} alt="Foto do Naver" />
         </div>
         <div className={styles.naverDetails}>
-          <img src={close} alt="Fechar modal de detalhes do usuário" />
+          <img src={close} alt="Fechar modal de detalhes do Naver" />
           <span className={styles.naverName}>{props.name}</span>
           <span className={styles.naverRole}>{props.job_role}</span>
           <dl>
